@@ -9,7 +9,16 @@ class Tweet extends Model
 {
     use HasFactory;
 
-    public function formattedText()
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'time' => 'datetime',
+    ];
+
+    public function getFormattedTextAttribute()
     {
     	$this->formatText();
 

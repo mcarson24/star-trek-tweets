@@ -13,7 +13,7 @@ class TweetTest extends TestCase
 	{
 		$tweet = Tweet::factory()->containsLink()->make();
 
-	    $this->assertEquals('Just click here <a target="_blank" href="https://example.com">https://example.com</a>!', $tweet->formattedText());
+	    $this->assertEquals('Just click here <a target="_blank" href="https://example.com">https://example.com</a>!', $tweet->formattedText);
 	}
 
 	/** @test */
@@ -21,7 +21,7 @@ class TweetTest extends TestCase
 	{
 		$tweet = Tweet::factory()->containsTwitterHandle()->make();
 
-	    $this->assertEquals('Thanks alot <a target="_blank" href="https://twitter.com/twitter">@twitter</a>!', $tweet->formattedText());
+	    $this->assertEquals('Thanks alot <a target="_blank" href="https://twitter.com/twitter">@twitter</a>!', $tweet->formattedText);
 	}
 
 	/** @test */
@@ -29,7 +29,7 @@ class TweetTest extends TestCase
 	{
 		$tweet = Tweet::factory()->containsHashtag()->make();
 
-	    $this->assertEquals('So cool! <a target="_blank" href="https://twitter.com/hashtag/sample?src=hash">#sample</a>', $tweet->formattedText());
+	    $this->assertEquals('So cool! <a target="_blank" href="https://twitter.com/hashtag/sample?src=hash">#sample</a>', $tweet->formattedText);
 	}
 
 	/** @test */
@@ -41,7 +41,7 @@ class TweetTest extends TestCase
 		]);
 
 	    $this->assertEquals('Sunday, January 1st, 2:00am', $tweet->fullTime);
-	    $this->assertEquals('<a target="_blank" href="https://twitter.com/sample">@sample</a> Hello everyone. <a target="_blank" href="https://twitter.com/hashtag/Greeting?src=hash">#Greeting</a>" <a target="_blank" href="https://twitter.com/sample">https://twitter.com/sample</a>', $tweet->formattedText());
+	    $this->assertEquals('<a target="_blank" href="https://twitter.com/sample">@sample</a> Hello everyone. <a target="_blank" href="https://twitter.com/hashtag/Greeting?src=hash">#Greeting</a>" <a target="_blank" href="https://twitter.com/sample">https://twitter.com/sample</a>', $tweet->formattedText);
 	}
 
 	/** @test */
