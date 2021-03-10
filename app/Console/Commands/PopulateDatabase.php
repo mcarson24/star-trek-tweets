@@ -15,7 +15,7 @@ class PopulateDatabase extends Command
      *
      * @var string
      */
-    protected $signature = 'tweets:populate {driver? : The desired database driver}';
+    protected $signature = 'tweets:populate';
 
     /**
      * The console command description.
@@ -58,7 +58,7 @@ class PopulateDatabase extends Command
     }
 
     /**
-     * Determine if the database is already populates
+     * Determine if the database is already populated
      * with the tweets. There should only ever
      * be 4551 tweets.
      * 
@@ -83,7 +83,7 @@ class PopulateDatabase extends Command
     }
 
     /**
-     * Populates the database with the tweets from the csv file.
+     * Populate the database with the tweets.
      * 
      * @return void                  
      */
@@ -118,6 +118,11 @@ class PopulateDatabase extends Command
         )->reverse();
     }
 
+    /**
+     * Determine if a SQLLite database is required.
+     * 
+     * @return boolean
+     */
     private function wantsSqlLiteDatabase()
     {
         return config('database.default') == 'sqlite';
