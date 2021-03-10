@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use Carbon\Carbon;
 use App\Models\Tweet;
-use App\CsvTweetLoader;
+use App\CSVTweetLoader;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 
@@ -114,7 +114,7 @@ class PopulateDatabase extends Command
         $csvFile = __DIR__ . '/tweets.csv';
         
         return collect(
-            CsvTweetLoader::load(1, $csvFile)
+            CSVTweetLoader::load(1, $csvFile)
         )->reverse();
     }
 

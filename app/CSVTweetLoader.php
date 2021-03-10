@@ -4,7 +4,7 @@ namespace App;
 
 use App\Models\Tweet;
 
-class CsvTweetLoader
+class CSVTweetLoader
 {
 	protected static $csvFile;
 
