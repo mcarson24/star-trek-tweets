@@ -17,6 +17,7 @@ class CreateTweetsTable extends Migration
             $table->id();
             $table->timestamp('time');
             $table->text('body');
+            $table->timestamps();
         });
     }
 
