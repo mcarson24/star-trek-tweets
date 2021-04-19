@@ -6,7 +6,7 @@ She archived her tweets, but the Google Spreadsheet was ugly and a little hard t
 
 It doesn't look pretty, but is easier to navigate then the spreadsheet was.
 
-It's currently sitting at https://star-trek-50-tweets.herokuapp.com/
+It's currently sitting at https://star-trek-tweets.herokuapp.com/
 
 It's probablty hibernating and may take a few seconds to wake up.
 
